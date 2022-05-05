@@ -4,7 +4,7 @@ This is the code base for the {Bank name here} retail banking Android applicatio
 Journey architecture. The Backbase retail Journey release version on which this project is based is recorded in
 [gradle.properties](gradle.properties).
 
-## Getting started
+## Getting started Test
 
 This project depends on various artifacts published to repositories on [Backbase Repo](https://repo.backbase.com). You
 must have read access to these repositories to build this project. To ensure the build system can access these
