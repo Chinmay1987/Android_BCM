@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customNavigation1"
+    android:label="Custom 1"
+
+    app:startDestination="@+id/customJourney1">
+
+  <fragment
+      android:id="@+id/customJourney1"
+      android:name="com.pwc.banking.custom_journey_1.CustomJourney1"
+      android:label="Custom Journey"
+      tools:layout="@layout/welcome_screen" />
+
+</navigation>

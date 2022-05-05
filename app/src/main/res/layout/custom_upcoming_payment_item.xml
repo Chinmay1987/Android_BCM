@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paymentItemContainer"
+    style="@style/UpcomingPaymentsJourneyListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="?spacerMedium"
+    android:paddingTop="?spacerMedium"
+    android:paddingEnd="?spacerMedium"
+    android:paddingBottom="?spacerMedium"
+
+    tools:paddingBottom="16dp"
+    tools:paddingEnd="16dp"
+    tools:paddingStart="16dp"
+    tools:paddingTop="16dp">
+
+    <com.backbase.android.design.icon.IconView
+        android:id="@+id/payment_icon"
+        android:layout_width="@dimen/upj_payment_icon_width_height"
+        android:layout_height="@dimen/upj_payment_icon_width_height"
+        app:backgroundRadius="?radiusMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:backgroundTint="@color/success_color" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        style="@style/UpcomingPaymentsTextView.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/spacerXSmall"
+        android:maxWidth="150dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/barrierView"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_marginBottom="4dp"
+        tools:text="John Miller With Many Names Even More" />
+
+    <com.backbase.android.design.badge.Badge
+        android:id="@+id/status_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/spacerSmall"
+        app:badgeType="warning"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_marginStart="8dp"
+        tools:text="Pending" />
+
+    <com.backbase.android.design.amount.AmountTextView
+        android:id="@+id/amount"
+        style="@style/UpcomingPaymentsTextView.Amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/spacerXSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name"
+
+        tools:layout_marginStart="4dp"
+        tools:text="USD 575.000.000" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date"
+        style="@style/UpcomingPaymentsTextView.Subheader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        tools:text="July 14, 2019. " />
+
+    <View
+        android:id="@+id/barrierView"
+        android:layout_width="?attr/spacerMedium"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/payment_icon"
+
+        app:layout_constraintStart_toEndOf="@+id/payment_icon"
+        app:layout_constraintTop_toTopOf="@+id/payment_icon"
+        tools:layout_height="16dp"
+        tools:layout_width="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

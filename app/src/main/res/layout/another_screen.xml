@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:showDividers="middle|end"
+      tools:ignore="UselessParent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/descriptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="The important text of another screen."
+        android:textAppearance="?textAppearanceBody1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/selectionDescriptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:text="View the selected date-time"
+        android:textAppearance="?textAppearanceBody1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="?selectableItemBackground"
+        android:hint="Select a date"
+        android:padding="16dp"
+        android:textAppearance="?textAppearanceBody2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timeSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="?selectableItemBackground"
+        android:hint="Select time"
+        android:padding="16dp"
+        android:textAppearance="?textAppearanceBody2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/zoneSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="?selectableItemBackground"
+        android:hint="Select time zone"
+        android:padding="16dp"
+        android:textAppearance="?textAppearanceBody2" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewDateTimeButton"
+        style="?buttonStylePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="View the selected date-time" />
+
+  </LinearLayout>
+
+</FrameLayout>

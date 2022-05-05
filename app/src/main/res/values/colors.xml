@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A6EC1</color>
+    <color name="colorPrimaryDark">#1A6EC1</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+
+
+
+    <color name="colorforsinglepositionloancurrent">#e86143</color>
+    <color name="colorforsinglepositionsavings">#ffc83d</color>
+    <color name="colorforsinglepositionloan">#aa2417</color>
+    <color name="colorforallaccounts">#ffb600</color>
+
+
+    <color name="mspendcolor">#d04a02</color>
+    <color name="msavecolor">#ffc83d</color>
+    <color name="mmortgagecolor">#e0301e</color>
+    <color name="mloancolor">#e0301e</color>
+    <color name="mautosavecolor">#feb791</color>
+    <color name="mcashbackcolor">#db536a</color>
+    <color name="mloayltypointscolor">#aa2417</color>
+    <color name="mrentpocketcolor">#feb791</color>
+    <color name="mcarepocketcolor">#f1bac3</color>
+    <color name="mloanpocketcolor">#ffecbd</color>
+    <color name="mmusicpocketcolor">#db536a</color>
+
+    <color name="green_color">#008000</color>
+    <color name="black_color">#000000</color>
+    <color name="dark_grey">#A9A9A9</color>
+
+
+
+</resources>

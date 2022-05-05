@@ -1,0 +1,18 @@
+<resources>
+
+  <style name="ApplicationTheme" parent="Theme.BackbaseRetail">
+    <!--Override Backbase Design System attributes here to change your application's theme-->
+  </style>
+
+
+  <!--<style name="ApplicationTheme" parent="Theme.BackbaseRetail">
+    <item name="colorPrimary">#FBCEB1</item>
+    <item name="colorPrimaryVariant">#FFBF00</item>
+    <item name="colorSecondary">#FF0000</item>
+    <item name="colorAccent">#004300</item>
+
+    <item name="radiusProminentButton">?radiusSmall</item>
+  </style>-->
+
+
+</resources>

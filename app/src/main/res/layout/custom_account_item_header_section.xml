@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/accountsTransactionsJourney_listView_sectionHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="viewStart"
+    android:paddingStart="?sizerMedium"
+    android:paddingTop="?sizerSmall"
+    android:paddingEnd="?sizerMedium"
+    android:paddingBottom="?sizerXSmall"
+    android:textAllCaps="true"
+    android:background="#eb8c00"
+    android:textAppearance="?textAppearanceCaption"
+    android:textColor="?android:textColorSecondary"
+    tools:text="@string/accountsAndTransactions.accounts.labels.allAccountsSectionTitle" />

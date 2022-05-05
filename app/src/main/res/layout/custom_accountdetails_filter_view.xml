@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/startdate_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Start Date"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/startdate_editview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/startdate_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Start date"
+        android:background="@drawable/bg_grey_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startdate_title"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/enddate_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="End Date"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/enddate_editview"
+        app:layout_constraintStart_toEndOf="@+id/startdate_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/enddate_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_grey_rounded"
+        android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+        android:hint="End date"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/startdate_editview"
+        app:layout_constraintTop_toBottomOf="@+id/enddate_title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/minamount_lable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Min. amount"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/minamount_editview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enddate_editview" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/minamount_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="From"
+        android:background="@drawable/bg_grey_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minamount_lable"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/maxamount_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:text="Max. amount"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/maxamount_editview"
+        app:layout_constraintStart_toEndOf="@+id/minamount_lable"
+        app:layout_constraintTop_toBottomOf="@+id/enddate_editview" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/maxamount_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_grey_rounded"
+        android:hint="To"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/minamount_editview"
+        app:layout_constraintTop_toBottomOf="@+id/maxamount_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/creditdebit_lable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Credit or debit"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/creditdebit_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minamount_editview" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/creditdebit_spinner"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:overlapAnchor="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditdebit_lable"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/transactiontype_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="10dp"
+        android:text="Transaction type"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/transactiontype_spinner"
+        app:layout_constraintStart_toEndOf="@+id/creditdebit_lable"
+        app:layout_constraintTop_toBottomOf="@+id/maxamount_editview" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/transactiontype_spinner"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_background"
+        android:overlapAnchor="false"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/creditdebit_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/transactiontype_label" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/billingstatus_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Billing Status"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/billingstatus_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/creditdebit_spinner" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/billingstatus_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        android:overlapAnchor="false"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billingstatus_label" />
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/firstchek_lable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="First check No"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/firstcheck_editview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billingstatus_spinner" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/firstcheck_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="First"
+        android:background="@drawable/bg_grey_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstchek_lable"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lastcheck_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="10dp"
+        android:text="Last check No"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lastcheck_editview"
+        app:layout_constraintStart_toEndOf="@+id/firstchek_lable"
+        app:layout_constraintTop_toBottomOf="@+id/billingstatus_spinner" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/lastcheck_editview"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_grey_rounded"
+        android:hint="To"
+        android:paddingTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/firstcheck_editview"
+        app:layout_constraintTop_toBottomOf="@+id/lastcheck_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

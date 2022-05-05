@@ -1,0 +1,39 @@
+<resources>
+  <string name="accounts_title">All Accounts</string>
+  <string name="app_name">My Application</string>
+  <string name="login_screen_title">Welcome PWC</string>
+  <string name="account_transactions_title">Sara Accounts</string>
+  <string name="customjourneyname">customJR</string>
+  <string name="changed_username_title">Welcome To PWC Sector Cloud</string>
+  <string name="username_screen_description">description</string>
+  <string name="account_details_title">custom_account_details_title</string>
+  <string name="custom_general_account_title">E-Wallet</string>
+  <string name="custom_transaction_detail_typetile">Custom Type Title</string>
+  <string name="custom_instructed_amount_title">Custom Instructed Amount Title</string>
+  <string name="custom_running_balance_title">Custom Running balance</string>
+  <string name="custom_transaction_detail_Descriptiontile">Custom transaction Description</string>
+  <string name="customized_savings_account_title">Custom_Savings_Title</string>
+  <string name="alternative_title">Schedule Alternative Title</string>
+  <string name="details_alternative_description">Schedule Alternative Description</string>
+  <string name="no_internet_title">Schedule No Internet title</string>
+  <string name="details_from_account">Custom From</string>
+  <string name="details_recipient">Custom Recipient</string>
+  <string name="details_schedule">Schedule Alternative</string>
+  <string name="details_schedledfor">ScheduledForAlternative</string>
+  <string name="details_header_to">Custom To</string>
+  <string name="delete_error_message_custom">Delete Error Message Custom</string>
+    <string name="payment_title">Payment Title</string>
+    <string name="no_data_available">No Transactions Available</string>
+
+
+  <string name="transaction_fragment">Transaction Fragment</string>
+  <string name="details_fragment">Details Fragment</string>
+  <string name="scheduletransfer_fragment">Coming Soon!</string>
+
+  <!-- Transaction Details Tabs -->
+  <string name="tab_transaction_history">Transactions</string>
+  <string name="tab_details">Details</string>
+  <string name="tab_schedule_transfers">Transfers</string>
+    <string name="universalApp_alerts_sessionExpired_title">SessionExpired Title</string>
+  <string name="universalApp_alerts_sessionExpired_message">SessionExpired Message</string>
+</resources>

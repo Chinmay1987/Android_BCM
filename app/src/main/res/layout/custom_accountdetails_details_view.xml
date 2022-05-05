@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/accountsdetails_loader"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:padding="@dimen/xlarge"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/account_details_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="?sizerSmall">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/manage_accounts_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/manageaccounts_constraint_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="?sizerSmall">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/manageaccounts_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:text="Manage Features"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    app:layout_constraintBottom_toTopOf="@+id/managed_features_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/managed_features_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/manageaccounts_title"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/general_account_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manage_accounts_cardid">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/general_constraint_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="?sizerSmall">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/general_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:text="General"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    app:layout_constraintBottom_toTopOf="@+id/account_type_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_type_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:text="Account type"
+                    android:textSize="14dp"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/general_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_type_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start"
+                    android:text="loan"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_type_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_balance_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:text="Account balance"
+                    android:textSize="14dp"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/general_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_balance_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$100.00"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_balance_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_status_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="14dp"
+                    android:gravity="start"
+                    android:text="Account status"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_type_value" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_status_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="Active"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_status_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_monthlyroundup_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="14dp"
+                    android:gravity="start"
+                    android:text="Monthly Roundup"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_balance_value" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_monthlyroundup_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$100.00"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_monthlyroundup_label" />
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/monthlyroundup_additions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="account_monthlyroundup_label, account_monthlyroundup_value" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/loan_details_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_account_cardid">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/loandetails_constraint_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="?sizerSmall">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/loandetails_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:text="Loan Details"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    app:layout_constraintBottom_toTopOf="@+id/monthlyinstallment_label"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/monthlyinstallment_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:textSize="14dp"
+                    android:text="Monthly Installment Amount"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/loandetails_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/monthlyinstallment_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$1066.04"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/monthlyinstallment_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/interestrate_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:textSize="14dp"
+                    android:text="Interest Rate"
+                    android:tooltipText="This is a dynamic interest rate based on the aggregate balance of your deposit accounts"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/monthlyinstallment_value" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/status_badge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+
+                    app:srcCompat="@drawable/info_icon"
+                    app:layout_constraintTop_toBottomOf="@id/monthlyinstallment_value"
+                    android:tooltipText="This is a dynamic interest rate based on the aggregate balance of your deposit accounts"
+                    app:layout_constraintStart_toEndOf="@+id/interestrate_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/interestrate__value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$100.00"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/interestrate_label" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/principalamount_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="start"
+                    android:textSize="14dp"
+                    android:text="Principal Amount"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/loandetails_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/principalamount_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$1066.04"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/principalamount_label" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/accruedinterest_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:text="Term"
+                    android:textSize="14dp"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/principalamount_value" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/accuredinsterest__value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="$100.00"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintTop_toBottomOf="@id/accruedinterest_label" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/other_details_cardid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loan_details_cardid">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/otherdetails_constraint_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="?sizerSmall">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/other_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:text="Other"
+                    android:textAlignment="viewStart"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    app:layout_constraintBottom_toTopOf="@+id/account_openingdate_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_openingdate_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="start"
+                    android:textSize="14dp"
+                    android:text="Account Opening Date"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/other_title" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/account_openingdate_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start"
+                    android:text="02 Mar 2022"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:chainUseRtl="true"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/account_openingdate_label" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:text="@string/no_data_available"
+        android:textSize="@dimen/large"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

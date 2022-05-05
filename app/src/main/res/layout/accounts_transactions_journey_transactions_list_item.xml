@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/account_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="?sizerLarge"
+    android:background="?attr/selectableItemBackground"
+    android:paddingBottom="?spacerMedium"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/accounts_transactions_journey_rootid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/backbaseRetail_transactionView_topGutter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="?spacerMedium" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/backbaseRetail_transactionView_endGutter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="?spacerMedium" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/backbaseRetail_transactionView_iconContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerMedium"
+
+        android:layout_marginEnd="?spacerSmall"
+        android:layout_marginBottom="?spacerMedium"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="@id/backbaseRetail_transactionView_topGutter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backbaseRetail_transactionView_name"
+        app:layout_constraintVertical_bias="0.0"
+
+        app:shimmer_auto_start="true"
+        app:shimmer_clip_to_children="true"
+        app:shimmer_colored="false">
+
+        <com.backbase.android.design.icon.IconView
+            android:id="@+id/iconSurrogate"
+            style="?iconNoAlphaStyle"
+            android:layout_width="@dimen/accountsTransactionsJourney_transactionsListItem_iconSize"
+            android:layout_height="@dimen/accountsTransactionsJourney_transactionsListItem_iconSize"
+            android:background="?colorShimmer"
+            android:importantForAccessibility="no"
+            android:padding="0dp"
+            app:backgroundRadius="?radiusMedium"
+            app:icon="@drawable/accounts_transactions_journey_shape_shimmer" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.backbase.android.design.icon.IconView
+        android:id="@+id/backbaseRetail_transactionView_icon"
+        style="?iconNoAlphaStyle"
+        android:layout_width="@dimen/accountsTransactionsJourney_transactionsListItem_iconSize"
+        android:layout_height="@dimen/accountsTransactionsJourney_transactionsListItem_iconSize"
+        android:layout_marginStart="?spacerMedium"
+        android:layout_marginBottom="?spacerMedium"
+        android:elevation="?elevationSmall"
+        android:labelFor="@+id/backbaseRetail_transactionView_type"
+        app:backgroundRadius="?radiusMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backbaseRetail_transactionView_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/backbaseRetail_transactionView_iconBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="backbaseRetail_transactionView_iconContainer,backbaseRetail_transactionView_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backbaseRetail_transactionView_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        android:layout_marginEnd="?spacerSmall"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:includeFontPadding="false"
+        android:scrollHorizontally="false"
+        android:textAppearance="?textAppearanceBody1Medium"
+        app:layout_constraintEnd_toStartOf="@+id/backbaseRetail_transactionView_amountsBarrier"
+        app:layout_constraintStart_toEndOf="@id/backbaseRetail_transactionView_iconBarrier"
+        app:layout_constraintTop_toTopOf="@id/backbaseRetail_transactionView_topGutter" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backbaseRetail_transactionView_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        android:layout_marginTop="?spacerXSmall"
+        android:layout_marginBottom="?spacerMedium"
+        android:ellipsize="end"
+        android:scrollHorizontally="false"
+        android:singleLine="true"
+        android:textAppearance="?textAppearanceSubtitle2"
+        android:textColor="?android:textColorSecondary"
+
+        app:layout_constraintEnd_toStartOf="@+id/backbaseRetail_transactionView_amountsBarrier"
+        app:layout_constraintStart_toEndOf="@id/backbaseRetail_transactionView_iconBarrier"
+        app:layout_constraintTop_toBottomOf="@id/backbaseRetail_transactionView_name"
+        app:lineHeight="?sizerLarge" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backbaseRetail_transactionView_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceSubtitle1"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintEnd_toEndOf="@id/backbaseRetail_transactionView_endGutter"
+        app:layout_constraintTop_toTopOf="@id/backbaseRetail_transactionView_topGutter"
+        app:layout_constraintWidth_max="@dimen/accountsTransactionsJourney_transactionsListItem_accessoryTextMaxWidth"
+        app:lineHeight="?sizerLarge" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/backbaseRetail_transactionView_runningBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:textAppearance="?textAppearanceSubtitle2"
+        android:textColor="?android:textColorSecondaryNoDisable"
+        app:layout_constraintEnd_toEndOf="@id/backbaseRetail_transactionView_endGutter"
+        app:layout_constraintTop_toBottomOf="@id/backbaseRetail_transactionView_amount"
+        app:layout_constraintWidth_max="@dimen/accountsTransactionsJourney_transactionsListItem_accessoryTextMaxWidth"
+        app:lineHeight="?sizerLarge"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/backbaseRetail_transactionView_amountsBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="backbaseRetail_transactionView_amount,backbaseRetail_transactionView_runningBalance" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+

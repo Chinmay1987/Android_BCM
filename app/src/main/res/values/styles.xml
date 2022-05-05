@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!--NOTE When creating a custom style for an existing attribute make sure to set the default style as parent style-->
+  <!--  example-->
+  <!--  <style name="Widget.MyCustomButton" parent="@style/Widget.Backbase.Button.Primary">-->
+  <!--    <item name="android:minHeight">100dp</item>-->
+  <!--  </style>-->
+
+
+  <style name="Widget.Backbase.AmountTextView" parent="@style/Widget.Backbase.AmountTextView" tools:ignore="ResourceCycle">
+    <item name="abbreviationSuffix">@array/bds_abbreviationSuffixes</item>
+    <item name="amount">0</item>
+    <item name="currencyCode">@null</item>
+    <item name="enableAbbreviation">false</item>
+    <item name="enableIsoFormat">false</item>
+    <item name="enableCustomFractions">false</item>
+    <item name="enablePositiveSign">false</item>
+    <item name="enableSignHighlight">false</item>
+    <item name="fractionDigits">2</item>
+    <item name="highlightNegativeColor">?colorAmountNegative</item>
+    <item name="highlightPositiveColor">?colorAmountPositive</item>
+    <item name="highlightThreshold">0</item>
+    <item name="maxFractionDigits">2</item>
+    <item name="minFractionDigits">2</item>
+    <item name="roundingMode">down</item>
+  </style>
+
+  <style name="spinner_style">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:background">@drawable/spinner_background</item>
+    <item name="android:layout_margin">10dp</item>
+    <item name="android:paddingLeft">8dp</item>
+    <item name="android:paddingRight">20dp</item>
+    <item name="android:paddingTop">5dp</item>
+    <item name="android:paddingBottom">5dp</item>
+    <item name="android:popupBackground">#DFFFFFFF</item>
+  </style>
+
+  <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+    <item name="android:divider">#123456</item>
+    <item name="android:dividerHeight">1dp</item>
+  </style>
+
+  <style name="MatchSpinnerTheme" parent="AppTheme">
+    <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+  </style>
+
+  <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+  </style>
+
+</resources>

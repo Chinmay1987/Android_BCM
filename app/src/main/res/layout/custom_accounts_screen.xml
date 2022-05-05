@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingTop="25dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="?sizerMedium"
+        android:paddingTop="?sizerSmall"
+        android:paddingEnd="?sizerMedium"
+        android:paddingBottom="?sizerXSmall"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="?android:textColorPrimary"
+        tools:text="@string/accounts_title" />
+
+    <ProgressBar
+        android:id="@+id/accounts_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:visibility="gone" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_productListCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?sizerMedium"
+        android:layout_marginTop="?spacerMedium"
+        android:layout_marginEnd="?sizerMedium"
+        android:layout_marginBottom="?sizerMedium"
+        app:contentPadding="0dp"
+        tools:visibility="gone">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/multiposition_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/custom_account_item_multiposition" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/accounts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/custom_account_item" />
+
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO MANDATORY: Update package name to your bank's application ID-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pwc.banking">
+
+  <uses-permission android:name=" android.permission.USE_BIOMETRIC" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application
+      android:name="com.pwc.banking.MyApplication"
+      android:allowBackup="false"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/ApplicationTheme"
+      android:networkSecurityConfig="@xml/network">
+
+    <!--TODO OPTIONAL: Uncomment the two meta-data tags below and replace `add_your_google_maps_api_key_here` with your
+         own google maps api key if you want to see a map in the transaction details screen with the merchant location.
+         Make sure that transaction enrichment is enabled in the backend, so transactions come with coordinates. Beware
+         that not all transactions contain location data. In those cases, the map will be hidden.  -->
+<!--    <meta-data-->
+<!--        android:name="com.google.android.gms.version"-->
+<!--        android:value="@integer/google_play_services_version" />-->
+<!--    <meta-data-->
+<!--        android:name="com.google.android.geo.API_KEY"-->
+<!--        android:value="add_your_google_maps_api_key_here" />-->
+
+    <!--Provider tag and filepaths file are used to share account statements-->
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/filepaths" />
+    </provider>
+
+    <activity android:name=".MyActivity">
+      <intent-filter>
+        <action android:name="android.intent.category.DEFAULT" />
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+  </application>
+
+</manifest>

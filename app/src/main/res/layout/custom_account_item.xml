@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="?sizerSmall">
+
+    <View
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_icon"
+        android:layout_width="5dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="?spacerSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/accountsAndTransactionsJourney_accountsScreen_iconBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="?spacerSmall"
+        android:labelFor="@+id/accountsAndTransactionsJourney_accountsScreen_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/accountsAndTransactionsJourney_accountsScreen_iconBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/accounts_transactions_journey_ic_account_type_current" />-->
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_iconBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="end"
+
+        app:constraint_referenced_ids="accountsAndTransactionsJourney_accountsScreen_icon" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:chainUseRtl="true"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/accountsAndTransactionsJourney_accountsScreen_subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryBarrier"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/accountsAndTransactionsJourney_accountsScreen_iconBarrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="Chesaa   fsdfds fd sdf sfd sf dsdsf dfs  dfs dsfdsf fd sdf sdfs fd sd fsd fsfd sd fsd fssdat" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="false"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="accountsAndTransactionsJourney_accountsScreen_rightAccessoryText, accountsAndTransactionsJourney_accountsScreen_rightAccessorySubtitle"
+        app:layout_constraintBottom_toTopOf="@id/accountsAndTransactionsJourney_accountsScreen_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/accountsAndTransactionsJourney_accountsScreen_subtitle" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        app:chainUseRtl="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryBarrier"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/accountsAndTransactionsJourney_accountsScreen_iconBarrier"
+        app:layout_constraintTop_toBottomOf="@id/accountsAndTransactionsJourney_accountsScreen_title"
+        tools:background="@android:color/holo_green_light"
+        tools:text="1 sfd ssf f dfs dfsdf sdfs fds df sfd s 56789" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        tools:background="@android:color/holo_blue_light"
+        android:gravity="end|center_vertical"
+        app:chainUseRtl="true"
+        tools:textAppearance="?textAppearanceHeadline4"
+        app:layout_constraintBottom_toTopOf="@id/accountsAndTransactionsJourney_accountsScreen_rightAccessorySubtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryBarrier"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:textStyle="bold"
+        tools:text="$350. dsf00" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessorySubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacerSmall"
+        android:gravity="end|center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryBarrier"
+        app:layout_constraintTop_toBottomOf="@id/accountsAndTransactionsJourney_accountsScreen_rightAccessoryText"
+        tools:background="@android:color/holo_red_light"
+        android:textColor="@color/grey"
+        tools:text="ddfsfdso" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

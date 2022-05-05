@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp">
+<com.google.android.material.textview.MaterialTextView
+    android:id="@+id/multiposition_list_sectionHeader"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingStart="?sizerMedium"
+    android:paddingTop="?sizerSmall"
+    android:paddingEnd="?sizerMedium"
+    android:paddingBottom="?sizerXSmall"
+    android:gravity="center"
+    android:textAllCaps="true"
+    android:background="#eb8c00"
+    android:textAppearance="?textAppearanceCaption"
+    android:textColor="?android:textColorPrimary"
+    tools:text="@string/accountsAndTransactions.accounts.labels.allAccountsSectionTitle" />
+</androidx.cardview.widget.CardView>

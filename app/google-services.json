@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "example",
+    "project_id": "example-banking-app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "example",
+        "android_client_info": {
+          "package_name": "com.pwc.banking"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "example"
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "example:debug",
+        "android_client_info": {
+          "package_name": "com.pwc.banking.debug"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "example:debug"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}

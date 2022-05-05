@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingHorizontal="?spacerLarge"
+    android:paddingBottom="?spacerMedium">
+
+    <com.backbase.android.design.header.SummaryStackView
+        android:id="@+id/transactionsJourney_summaryStackView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/transactionsJourney_transactionsScreen_barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="transactionsJourney_summaryStackView" />
+
+    <com.backbase.android.design.icon.IconView
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_1"
+        style="?iconWithBackgroundStyle"
+        android:layout_width="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_height="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_marginTop="?spacerLarge"
+        android:backgroundTint="?colorPrimary"
+        android:clipToPadding="false"
+        android:elevation="?elevationSmall"
+        android:padding="?spacerMedium"
+        android:visibility="gone"
+        app:iconColor="?colorOnPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/transactionsJourney_transactionsScreen_headerButton_1_text"
+        app:layout_constraintStart_toStartOf="@+id/transactionsJourney_transactionsScreen_headerButton_1_text"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_barrier"
+        tools:visibility="visible" />
+
+    <com.backbase.android.design.icon.IconView
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_2"
+        style="?iconWithBackgroundStyle"
+        android:layout_width="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_height="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_marginTop="?spacerLarge"
+        android:backgroundTint="?colorPrimary"
+        android:clipToPadding="false"
+        android:elevation="?elevationSmall"
+        android:padding="?spacerMedium"
+        android:visibility="gone"
+        app:iconColor="?colorOnPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/transactionsJourney_transactionsScreen_headerButton_2_text"
+        app:layout_constraintStart_toStartOf="@+id/transactionsJourney_transactionsScreen_headerButton_2_text"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_barrier"
+        tools:visibility="visible" />
+
+    <com.backbase.android.design.icon.IconView
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_3"
+        style="?iconWithBackgroundStyle"
+        android:layout_width="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_height="@dimen/accountsTransactionsJourney_accountDetailsScreen_headerButtonDimension"
+        android:layout_marginTop="?spacerLarge"
+        android:backgroundTint="?colorPrimary"
+        android:clipToPadding="false"
+        android:elevation="?elevationSmall"
+        android:padding="?spacerMedium"
+        android:visibility="gone"
+        app:iconColor="?colorOnPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/transactionsJourney_transactionsScreen_headerButton_3_text"
+        app:layout_constraintStart_toStartOf="@+id/transactionsJourney_transactionsScreen_headerButton_3_text"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_barrier"
+        tools:visibility="gone" />
+
+    <!-- setting the width to 33% is an explicit requirement from the designer -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_1_text"
+        style="?buttonStyleSmallLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/transactionsJourney_transactionsScreen_headerButton_2_text"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_headerButton_1"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="too many bananas"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_2_text"
+        style="?buttonStyleSmallLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/transactionsJourney_transactionsScreen_headerButton_3_text"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/transactionsJourney_transactionsScreen_headerButton_1_text"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_headerButton_2"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="apple"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButton_3_text"
+        style="?buttonStyleSmallLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/transactionsJourney_transactionsScreen_headerButton_2_text"
+        app:layout_constraintTop_toBottomOf="@+id/transactionsJourney_transactionsScreen_headerButton_3"
+        app:layout_constraintWidth_percent="0.33"
+        tools:text="mango"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/transactionsJourney_transactionsScreen_headerButtons_bottomBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="transactionsJourney_transactionsScreen_headerButton_1_text,transactionsJourney_transactionsScreen_headerButton_2_text,transactionsJourney_transactionsScreen_headerButton_3_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

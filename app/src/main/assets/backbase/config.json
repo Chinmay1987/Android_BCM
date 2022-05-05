@@ -1,0 +1,33 @@
+{
+  "development": {
+    "debugEnable": false
+  },
+  "backbase": {
+    "serverURL": "http://bcm-backbase.eastus.cloudapp.azure.com:9085",
+    "localModelPath": "$(contextRoot)/localModel.json",
+    "experience": "",
+    "version": "6.1.5",
+    "identity": {
+      "baseURL": "http://bcm-backbase.eastus.cloudapp.azure.com:8180",
+      "realm": "retail-app",
+      "clientId": "retail-web-client-id",
+      "applicationKey": "retail"
+    },
+    "authentication": {
+      "fieldNames": {
+        "username": "pwc_trial_20211227",
+        "password": "backbaseRepoEncryptedPassword=0ceC0278"
+      }
+    },
+    "navigationType": "tree",
+    "oAuth2": {
+      "tokenEndpoint": "http://oauth2-server:8180/apis/token/",
+      "clientId": "retail-web-client-id"
+    }
+  },
+  "security": {
+    "allowedDomains": [
+      "http://api-csp.eastus.cloudapp.azure.com"
+    ]
+  }
+}

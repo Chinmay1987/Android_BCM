@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:clipToPadding="false"
+      android:orientation="vertical"
+      android:padding="16dp"
+      android:showDividers="beginning|middle"
+      tools:ignore="UselessParent">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Custom Journey 1"
+        android:textAppearance="?textAppearanceHeadline2" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/oneScreenButton"
+        style="?buttonStylePrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Go to one screen" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/anotherScreenButton"
+        style="?buttonStyleLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Go to another screen" />
+
+  </LinearLayout>
+
+</FrameLayout>

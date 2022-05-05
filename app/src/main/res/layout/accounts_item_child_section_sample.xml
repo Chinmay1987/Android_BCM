@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/account_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="?sizerLarge"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <View
+            android:id="@+id/view_vertical_color"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="?spacerSmall"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/small"
+            android:paddingLeft="5dp"
+            android:text="account name"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_trail_lectures"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="35dp"
+            android:padding="@dimen/small"
+            android:text="amount"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/account_name"
+            app:layout_constraintBottom_toTopOf="@+id/barrier_trail_lectures"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_sub_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/small"
+            android:text="account name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_currency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="35dp"
+            android:padding="@dimen/small"
+            android:text="amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_amount" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/account_rateofinterest_value"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_rateofinterest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small"
+            android:text="Interest Rate: "
+            android:textSize="12dp"
+            android:layout_marginEnd="35dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintEnd_toEndOf="@+id/account_rateofinterest_value"
+            app:layout_constraintTop_toBottomOf="@+id/account_currency" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_rateofinterest_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="amount"
+            android:textSize="12dp"
+            android:layout_marginEnd="25dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintEnd_toEndOf="@+id/right_arrow"
+            app:layout_constraintTop_toBottomOf="@+id/account_currency" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_additions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="account_rateofinterest,account_rateofinterest_value"/>
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_trail_lectures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="account_sub_name,account_currency,account_rateofinterest,account_rateofinterest_value"
+            />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_nextpayment_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small"
+            android:text="Next Payment Amount: "
+            android:textSize="12dp"
+            android:layout_marginStart="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/account_sub_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/account_nextpayment_amount_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small"
+            android:text="$10"
+            android:textSize="12dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toEndOf="@+id/account_nextpayment_amount"
+            app:layout_constraintTop_toBottomOf="@+id/account_sub_name" />
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_loan_additions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="account_nextpayment_amount,account_nextpayment_amount_value"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

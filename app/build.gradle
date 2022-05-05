@@ -1,0 +1,138 @@
+apply plugin: 'com.android.application'
+// TODO: To enable push notifications, create a Firebase project for this app and replace this project's
+//  fake google-services.json file with a real one, downloaded from your Firebase project
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'org.jetbrains.kotlin.kapt'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        // TODO MANDATORY: Update applicationId to your bank's desired Application ID
+        applicationId 'com.pwc.banking'
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName '0.1.0'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/core_release.kotlin_module'
+        exclude 'META-INF/gen-paymentorder-client-2-payments-use-case_release.kotlin_module'
+        exclude 'win32-x86-64/attach_hotspot_windows.dll'
+        exclude 'win32-x86/attach_hotspot_windows.dll'
+        exclude 'META-INF/AL2.0'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE.md'
+        exclude 'META-INF/journey-common_release.kotlin_module'
+        exclude 'META-INF/licenses/ASM'
+        exclude 'META-INF/LICENSE-notice.md'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+        freeCompilerArgs = ['-Xjvm-default=enable']
+    }
+    buildFeatures{
+        viewBinding true
+    }
+    
+}
+
+dependencies {
+    coreLibraryDesugaring coreDeps.desugarJdkLibs
+
+    //region Backbase retail app artifacts
+    implementation deps.usApp
+    //endregion
+
+    //region Backbase UseCase artifacts
+    implementation deps.accountStatementsUseCase
+    implementation deps.accountsAndTransactionsAccountsUseCase
+    implementation deps.accountsAndTransactionsTransactionUseCase
+    implementation deps.authenticationUseCase
+    implementation deps.cardsManagementUseCase
+    implementation deps.cardsUserManagerUseCase
+    implementation deps.contactsUseCase
+    implementation deps.entitlementsUseCase
+    implementation deps.featureFilterUseCase
+    implementation deps.messagesUseCase
+    implementation deps.notificationsUseCase
+    implementation deps.notificationSettingsUseCase
+    implementation deps.notificationBannersUseCase
+    implementation deps.paymentAccountsUseCase
+    implementation deps.paymentContactsUseCase
+    implementation deps.paymentExternalAccountsUseCase
+    implementation deps.paymentUseCase
+    implementation deps.pocketsArrangementsUseCase
+    implementation deps.pocketsPaymentsUseCase
+    implementation deps.pocketsUseCase
+    implementation deps.upcomingPaymentsUseCase
+    implementation deps.userContextUseCase
+    implementation deps.businessWorkspacesUseCase
+    implementation deps.businessJourneyCommon
+
+    // US specific artifacts
+    implementation deps.rdcJourneyRdcClient2UseCase
+    //endregion
+
+    //region Backbase DBS client artifacts
+    implementation deps.accessControlClient
+    implementation deps.accountStatementsClient
+    implementation deps.actionsClient
+    implementation deps.cardsClient
+    implementation deps.clientsCommon
+    implementation coreDeps.messagesClient
+    implementation deps.notificationsClient
+    implementation deps.paymentOrderClient
+    implementation deps.pocketsClient
+    implementation coreDeps.productsClient
+    implementation deps.transactionClient
+    implementation deps.userManagerClient
+    implementation deps.genV2ArrangementsClient2
+
+    // US specific artifacts
+    implementation deps.paymentOrderA2aClient
+    implementation deps.rdcClient
+    //endregion
+
+    //region Other Backbase artifacts
+    implementation deps.backbaseDesignSystem
+    implementation deps.backbaseRetailDesign
+    //endregion
+
+    implementation androidDeps.appCompat
+    implementation androidDeps.coreKtx
+    implementation coreDeps.kotlinStdLib
+
+    // Workaround for https://issuetracker.google.com/issues/119070777, otherwise would be androidTestImplementation
+    debugImplementation(androidDeps.fragmentTesting) {
+        exclude group: 'androidx.test'
+    }
+
+    testImplementation coreDeps.junit
+
+    androidTestImplementation coreDeps.espressoCore
+    androidTestImplementation coreDeps.junitAndroidX
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.12.0'
+}

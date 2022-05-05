@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/custom_journey_1"
+
+    app:startDestination="@+id/customJourney1_welcomeScreen">
+
+  <fragment
+      android:id="@+id/customJourney1_welcomeScreen"
+      android:name="com.pwc.banking.custom_journey_1.welcome.WelcomeScreen"
+      android:label="Welcome"
+      tools:layout="@layout/welcome_screen">
+
+    <!--<action
+        android:id="@+id/action_customJourney1_welcomeScreen_to_oneScreen"
+        app:destination="@id/customJourney1_oneScreen"/>-->
+
+    <action
+        android:id="@+id/action_customJourney1_welcomeScreen_to_anotherScreen"
+        app:destination="@id/customJourney1_anotherScreen"
+        app:enterAnim="@anim/transition_slide_and_fade_in"
+        app:exitAnim="@anim/transition_fade_out"
+        app:popEnterAnim="@anim/transition_fade_in"
+        app:popExitAnim="@anim/transition_slide_and_fade_out" />
+
+  </fragment>
+
+  <!--<fragment
+      android:id="@+id/customJourney1_accountsScreen"
+      android:name="com.backbase.examplebanking.accounts.CustomAccountsScreen"
+      android:label="Welcome"
+      tools:layout="@layout/custom_accounts_screen" />-->
+
+  <fragment
+      android:id="@+id/customJourney1_anotherScreen"
+      android:name="com.pwc.banking.custom_journey_1.another.AnotherScreen"
+      android:label="Welcome"
+      tools:layout="@layout/another_screen" />
+
+</navigation>
