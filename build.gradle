@@ -165,8 +165,8 @@ allprojects {
                 url = "https://repo.backbase.com/$repoName"
                 credentials {
                     // These credentials must be defined in your machine's global gradle.properties file:
-                    username = backbaseRepoUsername
-                    password = backbaseRepoEncryptedPassword
+                    username = pwc_trial_20211227
+                    password = 0ceC0278
                 }
             }
         }
